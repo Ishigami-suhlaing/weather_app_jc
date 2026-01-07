@@ -1,5 +1,6 @@
 package com.example.weather_jc.screen.viewModel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.weather_jc.screen.WeatherUiState
@@ -21,7 +22,11 @@ class WeatherViewModel(
             try {
                 val response = repository.fetchWeather()
                 _uiState.value = WeatherUiState(data = response)
+                Log.d("RAW", response.toString())
+
             } catch (e: Exception){
+                Log.e("NETWORK", "Error type: ${e::class.qualifiedName}", e)
+
                 _uiState.value = WeatherUiState(
                     error = e.message ?: "Unknown Error"
                 )
