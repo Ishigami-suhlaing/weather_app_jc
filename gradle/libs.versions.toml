@@ -12,6 +12,7 @@ navigation = "2.9.6"
 ktor = "3.3.3"
 coil = "3.3.0"
 kotlinx-coroutines = "1.10.2"
+uiGraphics = "1.10.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,6 +41,7 @@ ktor-client-content-negotiation = {module = "io.ktor:ktor-client-content-negotia
 kotlinx-serialization-json = {module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.9.0"}
 coil3-coil-compose = {module = "io.coil-kt.coil3:coil-compose", version.ref = "coil"}
 coil3-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics", version.ref = "uiGraphics" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
